@@ -13,7 +13,7 @@ def loss(X, Y, w):
     Y_pred = predict(X, w)
     return ((Y_pred - Y) ** 2).mean()
 
-def train(X, Y, epochs=1000, lr):
+def train(X, Y, epochs=1000, lr=0.01):
     w = 0
     for i in range(epochs):
         current_loss = loss(X, Y, w)
